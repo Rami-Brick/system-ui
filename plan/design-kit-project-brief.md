@@ -24,7 +24,7 @@ Approach: pick a real design I love, recreate it with placeholder content, **doc
 - Tailwind CSS
 - shadcn/ui as the base, but heavily restyled/derived (the kit should NOT look like default shadcn)
 - `lucide-react` for icons
-- Fonts: Inter + Inter Display by default, unless we agree otherwise
+- Fonts: Plus Jakarta Sans by default
 
 The kit must be **portable** — assume it gets dropped into unrelated projects as a git submodule or copy.
 

@@ -182,8 +182,8 @@ const kitPreset: Partial<Config> = {
       },
 
       fontFamily: {
-        display: ['"Inter Display"', '"Inter"', "sans-serif"],
-        body: ['"Inter"', "sans-serif"],
+        display: ['"Plus Jakarta Sans Variable"', '"Plus Jakarta Sans"', "sans-serif"],
+        body: ['"Plus Jakarta Sans Variable"', '"Plus Jakarta Sans"', "sans-serif"],
       },
     },
   },

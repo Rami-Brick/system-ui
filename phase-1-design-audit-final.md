@@ -438,7 +438,7 @@ Use this to decide what can be standardized immediately vs what needs implementa
 
 ### 7.3 Typography
 
-Default stack: **Inter + Inter Display**. Pragmatic match to the design's geometric neo-grotesk feel.
+Default stack: **Plus Jakarta Sans**. A more premium geometric sans with enough personality for the kit's soft-tech dashboard feel.
 
 | Token | Size / weight | Purpose |
 |---|---|---|
@@ -568,7 +568,7 @@ Not blockers, but important to carry into later phases.
 
 ## 9. Decisions committed in this document
 
-- **Font stack:** Inter + Inter Display
+- **Font stack:** Plus Jakarta Sans
 - **Icon library:** `lucide-react`
 - **Token naming:** semantic dot-notation (`surface.glass-raised`, not `slate-850`)
 - **Fidelity strategy:** visual faithfulness first, then normalize only where reuse clearly benefits

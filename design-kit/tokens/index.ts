@@ -64,18 +64,18 @@ export type ColorToken = keyof typeof colors;
 
 export const typography = {
   // Font families
-  fontDisplay: '"Inter Display", "Inter", sans-serif',
-  fontBody: '"Inter", sans-serif',
+  fontDisplay: '"Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif',
+  fontBody: '"Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif',
 
   // Scale — size / weight pairs
-  displayLg: { fontSize: "44px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em" },
-  headingMd: { fontSize: "22px", fontWeight: 600, lineHeight: 1.2 },
-  panelTitle: { fontSize: "17px", fontWeight: 600, lineHeight: 1.3 },
-  statXl: { fontSize: "32px", fontWeight: 600, lineHeight: 1, letterSpacing: "-0.02em" },
-  statLg: { fontSize: "22px", fontWeight: 600, lineHeight: 1, letterSpacing: "-0.01em" },
-  bodyMd: { fontSize: "14px", fontWeight: 400, lineHeight: 1.5 },
-  bodySm: { fontSize: "12px", fontWeight: 400, lineHeight: 1.4 },
-  micro: { fontSize: "11px", fontWeight: 400, lineHeight: 1.3 },
+  displayLg: { fontSize: "40px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em" },
+  headingMd: { fontSize: "20px", fontWeight: 600, lineHeight: 1.2 },
+  panelTitle: { fontSize: "16px", fontWeight: 600, lineHeight: 1.3 },
+  statXl: { fontSize: "28px", fontWeight: 600, lineHeight: 1, letterSpacing: "-0.02em" },
+  statLg: { fontSize: "20px", fontWeight: 600, lineHeight: 1, letterSpacing: "-0.01em" },
+  bodyMd: { fontSize: "13px", fontWeight: 400, lineHeight: 1.5 },
+  bodySm: { fontSize: "11px", fontWeight: 400, lineHeight: 1.4 },
+  micro: { fontSize: "10px", fontWeight: 400, lineHeight: 1.3 },
 } as const;
 
 // ─── Radii ────────────────────────────────────────────────────────────────────

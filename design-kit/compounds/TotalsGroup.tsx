@@ -24,16 +24,25 @@ export interface TotalsGroupProps extends HTMLAttributes<HTMLDivElement> {
 export const TotalsGroup = forwardRef<HTMLDivElement, TotalsGroupProps>(
   ({ totals, className, ...props }, ref) => {
     const variants = VARIANT_MAP[totals.length] ?? VARIANT_MAP[3];
+    const gridColumns =
+      totals.length === 1
+        ? "grid-cols-1"
+        : totals.length === 2
+          ? "grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)]"
+          : "grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.25fr)]";
 
     return (
       <div
         ref={ref}
-        className={cn("flex w-full items-stretch gap-2", className)}
+        className={cn(
+          "grid w-full items-stretch gap-2",
+          gridColumns,
+          className,
+        )}
         {...props}
       >
         {totals.map((item, index) => {
           const variant = variants[index];
-          const isEmphasis = index === totals.length - 1;
 
           return (
             <PillStat
@@ -41,7 +50,6 @@ export const TotalsGroup = forwardRef<HTMLDivElement, TotalsGroupProps>(
               variant={variant}
               label={item.label}
               value={item.value}
-              className={isEmphasis ? "flex-[1.5]" : "flex-1"}
             />
           );
         })}

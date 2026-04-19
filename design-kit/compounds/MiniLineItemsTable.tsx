@@ -26,13 +26,13 @@ export const MiniLineItemsTable = forwardRef<
 
   return (
     <div ref={ref} className={cn("w-full", className)} {...props}>
-      <table className="w-full border-separate border-spacing-y-2 table-fixed">
+      <table className="w-full table-fixed border-separate border-spacing-y-2">
         <colgroup>
           <col className="w-6" />
           <col />
-          <col className="w-12" />
-          <col className="w-[52px]" />
-          <col className="w-[60px]" />
+          <col className="w-11" />
+          <col className="w-[76px]" />
+          <col className="w-[78px]" />
         </colgroup>
 
         <thead>
@@ -42,7 +42,7 @@ export const MiniLineItemsTable = forwardRef<
                 key={col}
                 scope="col"
                 className={cn(
-                  "pb-1 text-[11px] font-medium text-white/[0.46]",
+                  "whitespace-nowrap pb-1 text-[10px] font-medium text-white/[0.46]",
                   i === 1 ? "text-left" : "text-right",
                 )}
               >
@@ -55,15 +55,15 @@ export const MiniLineItemsTable = forwardRef<
         <tbody>
           {items.map((item) => (
             <tr key={item.id}>
-              <td className="text-right text-xs font-semibold text-white/[0.46]">
+              <td className="whitespace-nowrap text-right text-[11px] font-semibold text-white/[0.46]">
                 {item.number}
               </td>
-              <td className="text-left text-xs text-white/[0.72]">
+              <td className="truncate pr-3 text-left text-[11px] text-white/[0.72]">
                 {item.description}
               </td>
-              <td className="text-right text-xs text-white/[0.72]">{item.qty}</td>
-              <td className="text-right text-xs text-white/[0.72]">{item.rate}</td>
-              <td className="text-right text-xs font-semibold text-white">
+              <td className="whitespace-nowrap text-right text-[11px] tabular-nums text-white/[0.72]">{item.qty}</td>
+              <td className="whitespace-nowrap pl-3 text-right text-[11px] tabular-nums text-white/[0.72]">{item.rate}</td>
+              <td className="whitespace-nowrap pl-3 text-right text-[11px] font-semibold tabular-nums text-white">
                 {item.amount}
               </td>
             </tr>
