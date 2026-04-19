@@ -247,7 +247,7 @@ export default function App() {
             />
             <div>
               <p className="text-sm text-white/50">Revenue command center</p>
-              <h1 className="font-display text-[36px] font-bold leading-none tracking-tight sm:text-[44px]">
+              <h1 className="font-display text-[34px] font-bold leading-none tracking-tight sm:text-[40px]">
                 April receivables
               </h1>
             </div>
@@ -300,7 +300,7 @@ export default function App() {
               <PanelHeader
                 leading={
                   <>
-                    <h2 className="text-[17px] font-semibold leading-snug text-white">
+                    <h2 className="text-[16px] font-semibold leading-snug text-white">
                       All receivables
                     </h2>
                     <CircularIconButton

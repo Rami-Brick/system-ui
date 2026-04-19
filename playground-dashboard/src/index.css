@@ -8,6 +8,10 @@ body,
   height: 100%;
 }
 
+html {
+  font-size: 15px;
+}
+
 body {
   margin: 0;
   background: #0a0b0a;

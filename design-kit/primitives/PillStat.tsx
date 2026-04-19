@@ -4,7 +4,7 @@ import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
 import { cn } from "../utils/cn";
 
 const pillStat = cva(
-  "inline-flex h-12 items-center justify-between gap-4 rounded-full px-5",
+  "inline-flex h-12 min-w-0 items-center justify-between gap-3 rounded-full px-4",
   {
     variants: {
       variant: {
@@ -19,7 +19,7 @@ const pillStat = cva(
   },
 );
 
-const label = cva("text-[13px] font-medium", {
+const label = cva("min-w-0 text-[12px] font-medium leading-tight", {
   variants: {
     variant: {
       light: "text-black/55",
@@ -32,7 +32,7 @@ const label = cva("text-[13px] font-medium", {
   },
 });
 
-const value = cva("text-[14px] text-black tracking-tight", {
+const value = cva("shrink-0 whitespace-nowrap text-[13px] text-black tracking-tight", {
   variants: {
     variant: {
       light: "font-semibold",

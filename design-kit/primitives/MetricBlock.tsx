@@ -18,9 +18,9 @@ const metricBlock = cva("flex flex-col gap-1", {
 const metricValue = cva("text-white font-semibold tracking-tight leading-none", {
   variants: {
     size: {
-      sm: "text-[18px]",
-      md: "text-[22px]",
-      lg: "text-[32px]",
+      sm: "text-[17px]",
+      md: "text-[20px]",
+      lg: "text-[28px]",
     },
   },
   defaultVariants: {
@@ -33,7 +33,7 @@ const metricLabel = cva("text-white/[0.46] font-normal leading-snug", {
     size: {
       sm: "text-[11px]",
       md: "text-xs",
-      lg: "text-[13px]",
+      lg: "text-[12px]",
     },
   },
   defaultVariants: {
