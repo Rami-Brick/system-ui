@@ -1,4 +1,4 @@
-# Panel Header
+﻿# Panel Header
 
 **Tier:** Compound  
 **Path:** `/catalog/compounds/panel-header.md`  
@@ -32,7 +32,7 @@ If Panel Header drifts toward:
 ### Primitives and compounds commonly used
 - `CircularIconButton` — optional add/primary action in the leading region
 - `IconToolbar` — common trailing action group
-- `SegmentedToggle` *(future compound)* — likely center-slot content
+- `SegmentedToggle` — likely center-slot content
 - Any `ReactNode` accepted in all three slots
 
 ### Slot model
@@ -136,7 +136,7 @@ Panel Header does not enforce a title subcomponent, but the system has a recomme
 
 | Property | Value | Token direction |
 |---|---|---|
-| Size | 17px | `font.panel-title` *(expected token addition)* |
+| Size | 17px | `font.panel-title` |
 | Weight | 600 | semibold |
 | Color | `text.primary` | |
 | Leading | snug | |
@@ -145,12 +145,7 @@ In Tailwind: `text-[17px] font-semibold text-white leading-snug`
 
 This is guidance, not enforcement.
 
-### Expected token addition
-This should no longer be treated as a maybe. During extraction, add:
-
-- `font.panel-title` → `17px / 600 / leading-snug`
-
-This closes the gap between `font.body-md` and `font.heading-md` exposed by this compound.
+`font.panel-title` is included in the typography tokens and closes the gap between `font.body-md` and `font.heading-md`.
 
 ---
 
@@ -193,7 +188,7 @@ No new spacing tokens. One expected new typography token.
 |---|---|---|
 | Leading internal gap | `gap-3` | `space.3` (12px) |
 | Slot container gap | `gap-4` | `space.4` (16px) |
-| Panel title | `text-[17px] font-semibold` | `font.panel-title` *(to add)* |
+| Panel title | `text-[17px] font-semibold` | `font.panel-title` |
 
 ---
 
@@ -220,9 +215,9 @@ No new spacing tokens. One expected new typography token.
 ## 10. Code
 
 ```tsx
-// components/compounds/PanelHeader.tsx
+// design-kit/compounds/PanelHeader.tsx
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 export interface PanelHeaderProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -397,8 +392,8 @@ import { Paperclip, Send, Upload, Pencil, MoreHorizontal, X } from "lucide-react
 - **GlassPanel** — the context this compound is designed for
 - **CircularIconButton** — used in leading and trailing actions
 - **IconToolbar** — canonical grouped trailing actions
-- **SegmentedToggle** *(future compound)* — likely center-slot content
-- **InvoiceRow** *(future compound)* — typical body content beneath the header
+- **SegmentedToggle** — likely center-slot content
+- **InvoiceRow** — typical body content beneath the header
 
 ---
 
@@ -411,4 +406,10 @@ import { Paperclip, Send, Upload, Pencil, MoreHorizontal, X } from "lucide-react
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
+

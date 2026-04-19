@@ -104,7 +104,7 @@ These are the non-negotiable rules of the system. If future reuse breaks these, 
 - Display heading style — reusable typographic token
 - Icon toolbar — reusable compound
 - Secondary pill — reusable primitive
-- Split CTA pill with appended circle — reusable compound
+- Primary CTA pill with appended circle — reusable compound
 
 ---
 
@@ -280,7 +280,7 @@ This is the audit-derived decomposition of the screen into likely building block
 ### Reusable compounds
 1. Top nav item group (brand + nav + utilities)
 2. Icon toolbar (horizontal row of circular buttons)
-3. Split CTA (pill + appended circular + action)
+3. Primary CTA (pill + appended circular + action)
 4. KPI metric block (value + label + bar segment)
 5. Segmented composition bar (full 5-color meter)
 6. List/grid segmented toggle

@@ -1,4 +1,4 @@
-# Pill Button
+﻿# Pill Button
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/pill-button.md`  
@@ -57,7 +57,7 @@ If this component drifts toward:
 - Label is **single-line only**
 - Icons, if present, stay visually subordinate to the label
 - This component is **interactive only**
-- Display-only pill content belongs to a separate primitive such as **Pill Stat**
+- Display-only pill content belongs to a separate primitive such as **PillStat**
 
 ---
 
@@ -112,9 +112,9 @@ The loud lime/chartreuse pills in the reference screen read more like **display 
 
 That means:
 
-- the totals-row pills (`Sub Total`, `Total`, `Balance Due`) should belong to **Pill Stat** or another display primitive / compound
+- the totals-row pills (`Sub Total`, `Total`, `Balance Due`) should belong to **PillStat** or another display primitive / compound
 - this component should remain focused on **interactive labeled actions**
-- if Phase 3 proves there is a true need for an interactive accent pill, it can be added later as a justified extension, not as a default primitive variant
+- if a real product need proves there is a true need for an interactive accent pill, it can be added later as a justified extension, not as a default primitive variant
 
 This keeps the button system cleaner and reduces future overuse of accent.
 
@@ -206,11 +206,11 @@ This keeps the button system cleaner and reduces future overuse of accent.
 - use `glass` for quiet secondary actions
 - use `ghost` mainly in navigation-like active/inactive contexts
 - keep labels short and readable
-- pair this with Circular Icon Button for split CTAs
+- pair this with Circular Icon Button for Primary CTAs
 
 ### Don’t
 - don’t use this for display-only stats or totals
-- don’t introduce accent styling here unless Phase 3 proves it is truly needed
+- don’t introduce accent styling here unless a real product need proves it is truly needed
 - don’t let labels wrap
 - don’t invent extra sizes or colors casually
 - don’t let it drift toward a generic rounded rectangle button
@@ -220,10 +220,10 @@ This keeps the button system cleaner and reduces future overuse of accent.
 ## 10. Code
 
 ```tsx
-// components/primitives/PillButton.tsx
+// design-kit/primitives/PillButton.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const pillButton = cva(
   [
@@ -346,21 +346,21 @@ import { ChevronDown } from "lucide-react";
 
 ### Hero CTA — pill portion only
 
-The `New Customer +` pattern is a **Split CTA** compound — a `light` pill paired with a `solid` Circular Icon Button. The pill portion on its own looks like:
+The `New Customer +` pattern is a **Primary CTA** compound — a `light` pill paired with a `solid` Circular Icon Button. The pill portion on its own looks like:
 
 ```tsx
 <PillButton variant="light">New Customer</PillButton>
 ```
 
-See the future `SplitCTA` compound for the full pattern.
+Use `PrimaryCTA` for the full pattern.
 
 ---
 
 ## 12. Related components
 
 - **Circular Icon Button** — icon-only counterpart in the same shape family
-- **Split CTA** *(compound)* — composes this component’s `light` variant with a `solid` Circular Icon Button
-- **Pill Stat** *(future primitive)* — display-only pill used for totals and emphasized values
+- **Primary CTA** *(compound)* — composes this component’s `light` variant with a `solid` Circular Icon Button
+- **PillStat** — display-only pill used for totals and emphasized values
 - **Nav Tab Group** *(compound)* — built from `PillButton` instances in `light` / `ghost` states
 
 ---
@@ -374,4 +374,9 @@ See the future `SplitCTA` compound for the full pattern.
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+

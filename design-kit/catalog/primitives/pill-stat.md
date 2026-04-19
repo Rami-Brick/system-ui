@@ -1,4 +1,4 @@
-# Pill Stat
+﻿# Pill Stat
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/pill-stat.md`  
@@ -217,13 +217,10 @@ This primitive is intentionally non-interactive. Even though the current prop su
 | `radius.pill` | Shape |
 | `size.pill-lg` | Height (48px) |
 
-### Token addition
-The `muted` background and dark-on-light muted label tones are not fully formalized in the current token set. During extraction, add:
+The `muted` background and dark-on-light muted label tones are formalized as:
 
 - `surface.control-muted`
 - `text.inverse-muted`
-
-For now, they remain inlined because they are still slightly screenshot-derived.
 
 ---
 
@@ -250,10 +247,10 @@ For now, they remain inlined because they are still slightly screenshot-derived.
 ## 11. Code
 
 ```tsx
-// components/primitives/PillStat.tsx
+// design-kit/primitives/PillStat.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const pillStat = cva(
   "inline-flex h-12 items-center justify-between gap-4 rounded-full px-5",
@@ -387,13 +384,13 @@ PillStat.displayName = "PillStat";
 - **PillButton** — shares the silhouette, but is always interactive
 - **MetricBlock** — containerless stacked counterpart for headline stats
 - **KeyValueRow** — quieter inline counterpart for metadata
-- **TotalsGroup** *(future compound)* — composes multiple Pill Stats and owns width ratios
+- **TotalsGroup** — composes multiple Pill Stats and owns width ratios
 
 ---
 
 ## 14. Open questions / implementation notes
 
-- **Token extraction:** promote `surface.control-muted` and `text.inverse-muted` during extraction
+- **Token alignment:** keep `surface.control-muted` and `text.inverse-muted` aligned with this visual treatment
 - **Width-ratio convention:** the reference uses roughly `1 : 1 : 1.5`; keep this at compound level, not primitive level
 - **Accent scarcity enforcement:** design discipline only for now
 - **Dark-surface variant:** add only if a real need appears
@@ -401,4 +398,9 @@ PillStat.displayName = "PillStat";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+

@@ -1,4 +1,4 @@
-# Glass Panel
+﻿# Glass Panel
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/glass-panel.md`  
@@ -183,7 +183,7 @@ A blurred color field sits *behind* the panel inside the same relative container
 
 ### Ambient glow rules
 - Use sparingly — usually once per page
-- Prefer cool greens/teals from the Phase 1 atmosphere tokens
+- Prefer cool greens/teals from the atmosphere tokens
 - Keep glow behind the panel
 - Mark it `aria-hidden`
 
@@ -240,11 +240,11 @@ A blurred color field sits *behind* the panel inside the same relative container
 ## 12. Code
 
 ```tsx
-// components/primitives/GlassPanel.tsx
+// design-kit/primitives/GlassPanel.tsx
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const glassPanel = cva(
   [
@@ -368,7 +368,7 @@ GlassPanel.displayName = "GlassPanel";
 
 ## 14. Related components
 
-- **PanelHeader** *(future compound)* — title + actions inside a Glass Panel
+- **PanelHeader** — title + actions inside a Glass Panel
 - **CircularIconButton** — common panel header action primitive
 - **PillButton** — common panel header / row action primitive
 - **AvatarCircle** — common identity primitive displayed inside panels
@@ -385,4 +385,9 @@ GlassPanel.displayName = "GlassPanel";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+

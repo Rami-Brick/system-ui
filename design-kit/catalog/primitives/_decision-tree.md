@@ -1,4 +1,4 @@
-# Data Display Decision Tree
+﻿# Data Display Decision Tree
 
 **Path:** `/catalog/primitives/_decision-tree.md`
 
@@ -149,7 +149,7 @@ They share silhouette and size tiers. The test: does it trigger an action, or do
 
 ### Using `accent` anywhere except `PillStat`
 
-The lime color appears once on the reference screen: `Balance Due`. The Phase 1 invariants reserved accent for "highest emphasis, at most once per page." `PillStat.accent` is the only primitive that carries it. If you're tempted to add an `accent` variant to any other component, that's a signal to pause and reconsider — the scarcity is the point.
+The lime color appears once on the reference screen: `Balance Due`. The system reserves accent for "highest emphasis, at most once per page." `PillStat.accent` is the only primitive that carries it. If you're tempted to add an `accent` variant to any other component, that's a signal to pause and reconsider — the scarcity is the point.
 
 ---
 
@@ -163,3 +163,7 @@ When a new primitive is added to the catalog:
 4. If it creates a new anti-pattern, add an entry to the anti-patterns section
 
 Keep it scannable. If this document grows past one screen of reading, split it.
+
+
+
+

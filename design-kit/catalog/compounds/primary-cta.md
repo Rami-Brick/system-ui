@@ -1,4 +1,4 @@
-# Primary CTA
+﻿# Primary CTA
 
 **Tier:** Compound  
 **Path:** `/catalog/compounds/primary-cta.md`  
@@ -33,17 +33,16 @@ If Primary CTA drifts toward:
 
 ---
 
-## 2. Naming note
+## 2. Naming and behavior
 
-This pattern was originally explored under the name **Split CTA** because it has a visually split form: label area + circular emphasis area.
+The approved name is **Primary CTA** because the component communicates one page-level action. Although the shape has a label area and a trailing circular emphasis area, the behavior is unified:
 
-For the first approved version of the catalog, the better name is **Primary CTA** because:
+- one real button
+- one click target
+- one accessible label
+- one action
 
-- the **reference behavior is unified**, not split
-- the component is meant to communicate **importance first**
-- the previous name suggested a two-action split button by default, which was misleading
-
-A future two-action variant can exist later as a separate pattern if real product needs justify it.
+A future two-action button can exist later as a separate pattern if real product needs justify it, but it should not be folded into this component.
 
 ---
 
@@ -209,9 +208,9 @@ Derived from existing primitives; no new tokens required.
 ## 10. Code
 
 ```tsx
-// components/compounds/PrimaryCTA.tsx
+// design-kit/compounds/PrimaryCTA.tsx
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 export interface PrimaryCTAProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children"> {
@@ -334,4 +333,10 @@ import { Plus } from "lucide-react";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-# Avatar Circle
+﻿# AvatarCircle
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/avatar-circle.md`  
@@ -15,7 +15,7 @@ The **identity primitive** of the system. Used anywhere a person, customer, or e
 It completes the circular family alongside Circular Icon Button, but with a different semantic role:
 
 - **Circular Icon Button** = action
-- **Avatar Circle** = identity
+- **AvatarCircle** = identity
 
 That distinction should stay clean. This primitive itself is **not interactive**. If an avatar needs to open a menu, trigger navigation, or behave like a control, that belongs to a future **`AvatarButton` compound**, not this primitive.
 
@@ -67,7 +67,7 @@ If this component drifts toward:
 
 ## 3. Modes
 
-Avatar Circle has two visual modes. Consumers do not manually choose the mode; the component resolves it from the data.
+AvatarCircle has two visual modes. Consumers do not manually choose the mode; the component resolves it from the data.
 
 ### `image` mode
 
@@ -117,7 +117,7 @@ This component should stay narrow and reliable.
 
 ## 5. Color system
 
-Avatar Circle uses the **identity palette**, which is deliberately separate from accent/emphasis tokens.
+AvatarCircle uses the **identity palette**, which is deliberately separate from accent/emphasis tokens.
 
 | Color key | Hex | Typical use |
 |---|---|---|
@@ -176,7 +176,7 @@ The badge accepts any `ReactNode` and anchors it to the top-right corner, slight
 
 ## 8. States
 
-Avatar Circle is primarily a **static display primitive**.
+AvatarCircle is primarily a **static display primitive**.
 
 | State | Treatment |
 |---|---|
@@ -235,7 +235,7 @@ That means:
 ## 11. Code
 
 ```tsx
-// components/primitives/AvatarCircle.tsx
+// design-kit/primitives/AvatarCircle.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import {
   forwardRef,
@@ -244,7 +244,7 @@ import {
   type HTMLAttributes,
   type ReactNode,
 } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const AVATAR_COLORS = {
   blue: "bg-[#2D7CF6] text-white",
@@ -461,4 +461,10 @@ function colorForUser(userId: string): AvatarCircleColor {
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
+

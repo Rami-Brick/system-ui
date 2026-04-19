@@ -62,7 +62,7 @@ Only `GlassPanel` supports polymorphism via Radix Slot. The natural candidates t
 - **PillButton** — common need: render as `<a>` for navigation links that visually look like buttons (common in top navs)
 - **CircularIconButton** — same reason; icon-only links-as-buttons are common
 
-**Suggested resolution.** Add `asChild` to PillButton and CircularIconButton during Phase 4 extraction. Don't block compounds on this — the compounds we're about to build (Split CTA, Panel Header, Icon Toolbar) don't need it.
+**Suggested resolution.** Add `asChild` to PillButton and CircularIconButton during Phase 4 extraction. Don't block compounds on this — the compounds we're about to build (Primary CTA, Panel Header, Icon Toolbar) don't need it.
 
 **Severity:** low. Retrofit-safe.
 
@@ -139,7 +139,7 @@ Phase 1 §5 lists 14 compounds. When I proposed the Phase 3 build order last mes
 Based on Phase 1's full list + reusability analysis (most-reused first):
 
 ### Tier 1 — most reusable, build first
-1. **Split CTA** — `PillButton` + `CircularIconButton`
+1. **Primary CTA** — `PillButton` + `CircularIconButton`
 2. **Icon Toolbar** — horizontal row of `CircularIconButton`s
 3. **Nav Tab Group** — `PillButton` in `light`/`ghost` states
 4. **Panel Header** — title + left add-action + right action group, inside a `GlassPanel`

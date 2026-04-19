@@ -1,4 +1,4 @@
-# Key Value Row
+﻿# Key Value Row
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/key-value-row.md`  
@@ -197,10 +197,10 @@ One typographic treatment only.
 ## 10. Code
 
 ```tsx
-// components/primitives/KeyValueRow.tsx
+// design-kit/primitives/KeyValueRow.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const keyValueRow = cva(
   "flex flex-row items-baseline gap-3 text-xs leading-snug whitespace-nowrap",
@@ -308,8 +308,8 @@ KeyValueRow.displayName = "KeyValueRow";
 ## 12. Related components
 
 - **MetricBlock** — stacked counterpart for headline stats
-- **MetadataStack** *(future compound)* — vertical arrangement of multiple Key Value Rows
-- **PillStat** *(future primitive)* — display pill for labeled values needing more visual weight
+- **MetadataStack** — vertical arrangement of multiple Key Value Rows
+- **PillStat** — display pill for labeled values needing more visual weight
 
 ---
 
@@ -322,4 +322,9 @@ KeyValueRow.displayName = "KeyValueRow";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+

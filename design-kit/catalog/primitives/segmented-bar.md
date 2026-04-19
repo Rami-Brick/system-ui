@@ -1,4 +1,4 @@
-# Segmented Bar
+﻿# Segmented Bar
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/segmented-bar.md`  
@@ -162,10 +162,9 @@ Segments use the same **identity palette** as `AvatarCircle`.
 | `identity.blue` / `magenta` / `chartreuse` / `silver` / `orange` / `cyan` | Segment colors |
 | `surface.control` | Empty-state track color |
 | `radius.pill` | Pill silhouette |
-| `size.bar-sm` / `md` / `lg` *(new — add during extraction)* | Bar heights |
+| `size.bar-sm` / `md` / `lg` | Bar heights |
 
-### Token addition
-Bar heights are a new family and should be added during kit extraction. Until then, the component resolves them directly in code.
+Bar-height tokens are included in `tokens/index.ts` and exposed by the Tailwind preset.
 
 ---
 
@@ -191,10 +190,10 @@ Bar heights are a new family and should be added during kit extraction. Until th
 ## 10. Code
 
 ```tsx
-// components/primitives/SegmentedBar.tsx
+// design-kit/primitives/SegmentedBar.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const SEGMENT_COLORS = {
   blue: "bg-[#2D7CF6]",
@@ -342,14 +341,14 @@ SegmentedBar.displayName = "SegmentedBar";
 
 - **AvatarCircle** — shares the identity palette
 - **MetricBlock** — often sits above Segmented Bar in KPI contexts
-- **KPIStrip** *(future compound)* — composes Metric Blocks + Segmented Bar
+- **KPIStrip** — composes Metric Blocks + Segmented Bar
 - **ProgressBar** *(future primitive, if ever needed)* — semantically different single-value bar
 
 ---
 
 ## 13. Open questions / implementation notes
 
-- **Bar-height tokens:** add `size.bar-*` during extraction
+- **Bar-height tokens:** keep `SegmentedBar` sizes aligned with `size.bar-*`
 - **Tooltip composition:** keep outside this primitive if needed later
 - **Animation:** add only when a real requirement appears
 - **Per-segment accessibility:** if needed later, pair with a visually hidden list or nearby textual summary rather than overloading this primitive
@@ -357,4 +356,9 @@ SegmentedBar.displayName = "SegmentedBar";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+

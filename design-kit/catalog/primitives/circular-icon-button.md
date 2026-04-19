@@ -1,10 +1,10 @@
-# Circular Icon Button
+﻿# Circular Icon Button
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/circular-icon-button.md`  
 **Occurrences on reference screen:** 15+
 
-**Appears in:** top nav utilities (share, bell) · page header back button · 9-icon page toolbar · panel header actions (refresh, upload, edit, add) · invoice detail header (paperclip, send, upload, edit, ellipsis, close) · row ellipsis and open-link actions · split CTA `+` appended to primary button.
+**Appears in:** top nav utilities (share, bell) · page header back button · 9-icon page toolbar · panel header actions (refresh, upload, edit, add) · invoice detail header (paperclip, send, upload, edit, ellipsis, close) · row ellipsis and open-link actions · Primary CTA `+` appended to primary button.
 
 ---
 
@@ -165,10 +165,10 @@ This is the system default.
 ## 8. Code
 
 ```tsx
-// components/primitives/CircularIconButton.tsx
+// design-kit/primitives/CircularIconButton.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const circularIconButton = cva(
   [
@@ -300,13 +300,13 @@ import { MoreHorizontal, ArrowUpRight } from "lucide-react";
 </div>
 ```
 
-### Nested inside a light split CTA
+### Nested inside a light Primary CTA
 
 ```tsx
 import { Plus } from "lucide-react";
 
 // Temporary composition example.
-// In the final catalog, prefer the dedicated Split CTA compound.
+// In the final catalog, prefer the dedicated Primary CTA compound.
 <button className="flex items-center gap-2 rounded-full bg-white/95 pl-5 pr-1 py-1 text-black">
   <span className="text-sm font-medium">New Customer</span>
   <CircularIconButton variant="solid" icon={<Plus />} aria-label="Create customer" />
@@ -318,9 +318,9 @@ import { Plus } from "lucide-react";
 ## 10. Related components
 
 - **Pill Button** — text-based counterpart in the same shape family
-- **Avatar Circle** — shares circular sizing logic, but represents identity rather than action
+- **AvatarCircle** — shares circular sizing logic, but represents identity rather than action
 - **Icon Toolbar** — compound composed from multiple `CircularIconButton` instances
-- **Split CTA** — compound that pairs a pill action with this component’s `solid` variant
+- **Primary CTA** — compound that pairs a pill action with this component’s `solid` variant
 
 ---
 
@@ -333,4 +333,10 @@ import { Plus } from "lucide-react";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
+

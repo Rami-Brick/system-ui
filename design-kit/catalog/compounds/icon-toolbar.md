@@ -1,4 +1,4 @@
-# Icon Toolbar
+﻿# Icon Toolbar
 
 **Tier:** Compound  
 **Path:** `/catalog/compounds/icon-toolbar.md`  
@@ -183,10 +183,10 @@ No new tokens.
 ## 9. Code
 
 ```tsx
-// components/compounds/IconToolbar.tsx
+// design-kit/compounds/IconToolbar.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const iconToolbar = cva("flex flex-row items-center", {
   variants: {
@@ -304,8 +304,8 @@ import { RefreshCw, Upload, Pencil } from "lucide-react";
 ## 11. Related components
 
 - **CircularIconButton** — the only primitive used here
-- **PanelHeader** *(future compound)* — natural host for tight toolbars
-- **NavTabGroup** *(future compound)* — analogous grouping pattern for pill-based navigation, not icon-only actions
+- **PanelHeader** — natural host for tight toolbars
+- **NavTabGroup** — analogous grouping pattern for pill-based navigation, not icon-only actions
 
 ---
 
@@ -318,4 +318,10 @@ import { RefreshCw, Upload, Pencil } from "lucide-react";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
+

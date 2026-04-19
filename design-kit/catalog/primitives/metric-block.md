@@ -1,4 +1,4 @@
-# Metric Block
+﻿# Metric Block
 
 **Tier:** Primitive (foundational)  
 **Path:** `/catalog/primitives/metric-block.md`  
@@ -88,7 +88,7 @@ This primitive should stay visually simple and semantically tight.
 - Do not invent additional size tiers outside `sm` / `md` / `lg`
 
 ### Token mapping
-These values are the current concrete resolution of the Phase 1 token intent:
+These values are the current concrete resolution of the token intent:
 - `sm` value ≈ small emphasized data
 - `md` value ≈ secondary stat emphasis
 - `lg` value ≈ KPI / hero stat emphasis
@@ -178,10 +178,10 @@ So the rule is:
 ## 10. Code
 
 ```tsx
-// components/primitives/MetricBlock.tsx
+// design-kit/primitives/MetricBlock.tsx
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils/cn";
 
 const metricBlock = cva("flex flex-col gap-1", {
   variants: {
@@ -254,7 +254,7 @@ MetricBlock.displayName = "MetricBlock";
 - The primitive now models **only** the stacked stat pattern
 - `value` and `label` remain explicit props so the pair stays structurally bound
 - Raw Tailwind sizes are the concrete implementation of the earlier token hierarchy
-- `tracking-tight` preserves the “numbers should feel slightly tighter” rule from Phase 1
+- `tracking-tight` preserves the "numbers should feel slightly tighter" rule from the audit
 - `leading-snug` on the label helps longer KPI labels remain readable without becoming visually loud
 
 ---
@@ -310,9 +310,9 @@ MetricBlock.displayName = "MetricBlock";
 
 ## 12. Related components
 
-- **KeyValueRow** *(future primitive)* — inline metadata pattern such as `Invoice Date: 09/08/2018`
-- **SegmentedBar** *(future primitive)* — colored group-level bar shown beneath KPI metrics
-- **KPIStrip** *(future compound)* — horizontal arrangement of Metric Blocks plus SegmentedBar
+- **KeyValueRow** — inline metadata pattern such as `Invoice Date: 09/08/2018`
+- **SegmentedBar** — colored group-level bar shown beneath KPI metrics
+- **KPIStrip** — horizontal arrangement of Metric Blocks plus SegmentedBar
 - **GlassPanel** — common surface containing one or more Metric Blocks
 
 ---
@@ -326,4 +326,9 @@ MetricBlock.displayName = "MetricBlock";
 
 ---
 
-**Status:** draft — awaiting validation
+**Status:** final packaged
+
+
+
+
+
