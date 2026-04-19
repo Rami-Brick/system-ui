@@ -64,8 +64,8 @@ export type ColorToken = keyof typeof colors;
 
 export const typography = {
   // Font families
-  fontDisplay: '"Inter Display", "Inter", sans-serif',
-  fontBody: '"Inter", sans-serif',
+  fontDisplay: '"Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif',
+  fontBody: '"Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif',
 
   // Scale — size / weight pairs
   displayLg: { fontSize: "44px", fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em" },

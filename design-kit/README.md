@@ -17,7 +17,7 @@ A dark, glass-heavy React + Tailwind UI kit extracted from a dashboard reference
 ```bash
 npm install class-variance-authority @radix-ui/react-slot lucide-react clsx tailwind-merge
 npm install tailwindcss
-npm install @fontsource-variable/inter @fontsource-variable/inter-display
+npm install @fontsource-variable/plus-jakarta-sans
 ```
 
 ## Tailwind
@@ -32,11 +32,10 @@ export default {
 };
 ```
 
-Load Inter and Inter Display in your app entry:
+Load Plus Jakarta Sans in your app entry:
 
 ```ts
-import "@fontsource-variable/inter";
-import "@fontsource-variable/inter-display";
+import "@fontsource-variable/plus-jakarta-sans";
 ```
 
 If you use CSS variables, import or paste `cssVars` from `tokens/index.ts` into your global stylesheet generation.
