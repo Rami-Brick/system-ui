@@ -20,6 +20,7 @@ DIRS = [
 ]
 
 FILES = {
+    "references/screenshots/PUT_SCREENSHOTS_HERE.txt": "Put primary UI screenshots, palette references, typography references, component details, assets, and mood references here.\n",
     "design-kit/tokens/index.ts": "export const tokens = {} as const;\n",
     "design-kit/tokens/tailwind-preset.ts": "import type { Config } from \"tailwindcss\";\n\nconst kitPreset: Partial<Config> = {\n  theme: { extend: {} },\n};\n\nexport default kitPreset;\n",
     "design-kit/utils/cn.ts": "import { clsx, type ClassValue } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n",

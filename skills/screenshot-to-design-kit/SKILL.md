@@ -21,6 +21,14 @@ Inspect all provided materials before asking intake questions:
 - written prompt or brand notes
 - current design-kit files if this is an update
 
+If no `references/screenshots/` folder or no visual resources exist, onboard the user:
+
+1. Create `references/screenshots/` in the target project when filesystem access is available.
+2. Create a short `references/screenshots/PUT_SCREENSHOTS_HERE.txt` note when possible.
+3. Tell the user to add primary UI screenshots and optional palette, typography, component-detail, asset, and mood references.
+4. Provide the starter prompt from `references/user-onboarding.md`.
+5. Stop until the user adds resources.
+
 Classify every visual resource before asking questions:
 
 - primary screen to recreate
@@ -74,6 +82,7 @@ Follow this checkpoint sequence unless the user explicitly chooses fast auto:
 
 Use `references/checkpoint-workflow.md` for detailed phase deliverables and gate criteria.
 Use `references/resource-classification.md` when there are multiple screenshots, device screenshots, browser screenshots, mockups, or supporting visual resources.
+Use `references/user-onboarding.md` when the user asks how to start, how to organize screenshots, or when resources are missing.
 Use `references/fidelity-rubric.md` before implementation and again after the playground render.
 Use `references/single-reference-mode.md` when the user provides only one screenshot and no supporting palette/assets.
 
@@ -113,6 +122,12 @@ python skills/screenshot-to-design-kit/scripts/scaffold_design_kit.py --root .
 ```
 
 Adjust the script path if the skill is installed globally.
+
+To only prepare the screenshot/resource folder, run:
+
+```bash
+python skills/screenshot-to-design-kit/scripts/prepare_references.py --root .
+```
 
 ## Implementation Standards
 
