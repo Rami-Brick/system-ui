@@ -20,6 +20,8 @@ Run this before final handoff.
 - Typography scale feels close to the chosen reference.
 - Accent color is not overused.
 - Responsive layouts do not collapse incoherently in requested viewports.
+- Device/browser/mockup chrome is handled according to the user's answer.
+- Full-screen mobile pages do not accidentally sit inside a fake phone frame.
 
 ## Kit Integrity
 

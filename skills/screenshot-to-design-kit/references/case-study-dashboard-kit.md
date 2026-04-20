@@ -81,3 +81,4 @@ Page-level:
 - Tables and totals need explicit widths and tabular numerals to avoid overlap.
 - A screenshot clone is less valuable than a reusable system with a faithful playground.
 - Human checkpoints catch taste issues that build/lint cannot.
+- If a screenshot includes a device frame or presentation canvas, verify whether it is part of the desired UI before building it.

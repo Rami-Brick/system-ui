@@ -56,6 +56,26 @@ Prioritize:
 
 If exact values are uncertain, label them as estimates in the audit and refine during playground QA.
 
+## Device And Browser Frame Handling
+
+Screenshots often include capture context that should not become UI:
+
+- iPhone notch or dynamic island
+- iOS/Android status bar
+- browser address bar
+- desktop wallpaper/canvas around a mockup
+- rounded phone body
+- presentation background
+- Dribbble/marketing shot framing
+
+Before implementation, decide whether these are:
+
+1. **Real target UI**: reproduce them as components.
+2. **Viewport context**: account for safe areas, but do not draw them.
+3. **Presentation artifact**: remove entirely.
+
+For mobile app screenshots, default to building the actual app screen, not a phone mock, unless the user asks for a mockup. Use full viewport shells (`min-h-dvh`) and safe-area padding for real mobile web/app surfaces.
+
 ## Accessibility
 
 - Icon-only controls require accessible labels.
@@ -92,6 +112,7 @@ When a dev server can run:
    - icons misaligned inside circles
    - accent color appearing too often
    - page-level layout bypassing the kit
+   - device/browser chrome accidentally recreated as UI
 
 If Playwright is available, prefer screenshots over eyeballing. If no browser tool is available, run build/lint and ask the user to share a screenshot after launching.
 

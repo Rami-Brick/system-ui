@@ -21,6 +21,17 @@ Inspect all provided materials before asking intake questions:
 - written prompt or brand notes
 - current design-kit files if this is an update
 
+Classify every visual resource before asking questions:
+
+- primary screen to recreate
+- supporting color reference
+- supporting typography reference
+- component/detail reference
+- mood/inspiration reference
+- device/browser/mockup frame reference
+
+If a screenshot includes device chrome, browser chrome, a notch, status bar, rounded phone frame, desktop canvas, or presentation background, do not assume it is part of the UI. Ask whether the frame/chrome should be reproduced, removed, or treated as viewport context.
+
 If a linked reference or current information is needed and not provided locally, browse or ask for the missing artifact. If screenshots are missing, ask for them before starting.
 
 ## Intake Questions
@@ -32,11 +43,13 @@ Use `references/intake-questions.md` for the full question bank. Ask only the qu
 Default questions:
 
 1. Output goal: reusable design kit, one-screen recreation, apply to existing app, or all of these.
-2. Fidelity target: close clone, inspired system, or loose style transfer.
-3. Stack: React/Vite/Tailwind default unless the app already uses another stack.
-4. Typography direction: premium geometric, editorial/luxury, technical/neutral, or custom.
-5. Checkpoint mode: guided checkpoints, fast auto with final review, or research only.
-6. Responsive scope: desktop only, desktop plus tablet, or full responsive.
+2. Primary reference: which screenshot is the main screen/page to recreate.
+3. Frame/chrome behavior: reproduce, remove, or treat as real viewport context.
+4. Fidelity target: close clone, inspired system, or loose style transfer.
+5. Stack: React/Vite/Tailwind default unless the app already uses another stack.
+6. Typography direction: premium geometric, editorial/luxury, technical/neutral, or custom.
+7. Checkpoint mode: guided checkpoints, fast auto with final review, or research only.
+8. Responsive scope: desktop only, desktop plus tablet, or full responsive.
 
 After the user answers, summarize the decisions in 5-8 lines and start Phase 1.
 
@@ -60,6 +73,7 @@ Follow this checkpoint sequence unless the user explicitly chooses fast auto:
    Run build/lint, inspect desktop/mobile if possible, fix obvious layout overlap, and create `CLAUDE.md` plus `README.md` usage guidance. Stop with final handoff.
 
 Use `references/checkpoint-workflow.md` for detailed phase deliverables and gate criteria.
+Use `references/resource-classification.md` when there are multiple screenshots, device screenshots, browser screenshots, mockups, or supporting visual resources.
 
 Before implementing a substantial kit, skim `references/case-study-dashboard-kit.md` for a compact example of the expected decomposition depth and output quality.
 
@@ -83,6 +97,7 @@ design-kit/
 
 Use `references/output-contract.md` for file-level expectations.
 Use `references/qa-checklist.md` before final handoff.
+Use `references/correction-loop.md` when the user gives post-delivery feedback.
 
 If starting from an empty project, run:
 
@@ -134,4 +149,5 @@ When the target is an existing app:
 - Do not make only research docs and skip implementation when implementation is requested.
 - Do not create generic shadcn/SaaS UI if the screenshot has a distinctive language.
 - Do not ask questions before inspecting the screenshot/resources.
+- Do not turn a phone screenshot, browser screenshot, or presentation mockup into a device frame unless the user explicitly wants the frame.
 - Do not bury the user in many rounds of tiny questions; ask the key questions once, then work phase by phase.
