@@ -30,61 +30,73 @@ Ask these after inspecting screenshots/resources. Use only relevant questions.
 
 5. **Fidelity Target**
    - Close clone: match screenshot closely
-   - Inspired system: preserve visual DNA, adapt content
+   - Inspired system: preserve visual DNA and proportions, adapt content
    - Style transfer: use the mood, not the layout
 
-6. **Checkpoint Mode**
+6. **Asset Strategy**
+   - Use user-provided assets only
+   - Crop/reference assets from screenshots where appropriate
+   - Use neutral placeholders but preserve layout dimensions
+   - Ask me to provide missing photos/icons/assets
+
+7. **Atmosphere Preservation**
+   - Preserve internal app atmosphere/surface colors from the screenshot
+   - Flatten to a cleaner production app surface
+   - Adapt to my brand/app background
+   - Ask me if the screenshot contains presentation-only atmosphere
+
+8. **Checkpoint Mode**
    - Guided checkpoints: stop after each phase
    - Fast auto: run through and show final report
    - Research only: audit and plan, no code
 
-7. **Responsive Scope**
+9. **Responsive Scope**
    - Desktop only
    - Desktop plus tablet
    - Full responsive including mobile
 
 ## Design Direction
 
-8. **Typography**
+10. **Typography**
    - Premium geometric: Plus Jakarta Sans, Sora, Manrope
    - Editorial/luxury: Fraunces + Manrope, Playfair Display + Inter-like body
    - Technical/neutral: Geist, IBM Plex Sans, Inter
    - Custom font supplied by user
 
-9. **Color Fidelity**
+11. **Color Fidelity**
    - Estimate from screenshot
    - Use eyedropped exact values if assets allow it
    - Adapt to my brand colors
 
-10. **Motion**
+12. **Motion**
    - None except hover/focus
    - Subtle transitions
    - Rich interactive motion where appropriate
 
-11. **Density**
+13. **Density**
    - Match screenshot density
    - Make it calmer and more spacious
    - Make it denser for professional workflows
 
 ## Technical
 
-12. **Stack**
+14. **Stack**
    - React + Vite + TypeScript + Tailwind
    - Next.js + Tailwind
    - Existing app stack
    - Custom
 
-13. **Component Base**
+15. **Component Base**
    - Headless/custom components
    - shadcn/ui restyled heavily
    - Existing design system components
 
-14. **Packaging**
+16. **Packaging**
    - Local `design-kit/` folder
    - Package-ready library
    - Copyable kit for AI assistants
 
-15. **Validation**
+17. **Validation**
    - Build/lint only
    - Build/lint plus screenshots
    - Build/lint plus responsive visual pass
@@ -99,6 +111,8 @@ Decision summary:
 - Primary reference:
 - Frame/chrome behavior:
 - Fidelity:
+- Asset strategy:
+- Atmosphere:
 - Stack:
 - Font direction:
 - Responsive scope:

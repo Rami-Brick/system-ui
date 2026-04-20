@@ -74,8 +74,14 @@ Follow this checkpoint sequence unless the user explicitly chooses fast auto:
 
 Use `references/checkpoint-workflow.md` for detailed phase deliverables and gate criteria.
 Use `references/resource-classification.md` when there are multiple screenshots, device screenshots, browser screenshots, mockups, or supporting visual resources.
+Use `references/fidelity-rubric.md` before implementation and again after the playground render.
+Use `references/single-reference-mode.md` when the user provides only one screenshot and no supporting palette/assets.
 
-Before implementing a substantial kit, skim `references/case-study-dashboard-kit.md` for a compact example of the expected decomposition depth and output quality.
+Before implementing a substantial kit, skim the relevant case studies:
+
+- `references/case-study-dashboard-kit.md` for a dark glass dashboard with strong component extraction.
+- `references/case-study-mobile-fitness-success.md` for a good multi-reference mobile app extraction.
+- `references/case-study-healthcare-dashboard.md` for a single-screenshot healthcare dashboard where atmosphere and density matter.
 
 ## Output Contract
 
@@ -97,6 +103,7 @@ design-kit/
 
 Use `references/output-contract.md` for file-level expectations.
 Use `references/qa-checklist.md` before final handoff.
+Use `references/visual-comparison-report.md` to report visual QA.
 Use `references/correction-loop.md` when the user gives post-delivery feedback.
 
 If starting from an empty project, run:
@@ -118,6 +125,8 @@ Adjust the script path if the skill is installed globally.
 - Preserve accessibility: labels for icon buttons, focus states, semantic nav/table/region markup.
 - Avoid overfitting to one screenshot artifact unless the user asked for a strict clone.
 - Validate with build/lint and visual inspection where possible.
+- Treat HTTP 200, typecheck, and build as functional checks only. They do not count as visual QA.
+- For any recreation, produce or request a side-by-side visual comparison before final handoff.
 
 Use `references/implementation-guidelines.md` for deeper rules.
 
@@ -132,6 +141,7 @@ At checkpoints:
 In fast auto mode, continue through all phases, but still produce the same reports in the final answer.
 
 Never mark the project complete if there are obvious text overlaps, clipped buttons, blank renders, missing exports, or a playground that mostly ignores the kit.
+Never mark visual QA complete from server availability alone. If screenshots cannot be captured, say so and ask the user to provide a playground screenshot.
 
 ## Applying The Kit To An Existing App
 
@@ -148,6 +158,7 @@ When the target is an existing app:
 - Do not make only a pretty playground and skip reusable components.
 - Do not make only research docs and skip implementation when implementation is requested.
 - Do not create generic shadcn/SaaS UI if the screenshot has a distinctive language.
+- Do not let "inspired system" mean generic redesign. Preserve the reference's layout DNA, density, surface atmosphere, and signature elements unless the user explicitly wants looser style transfer.
 - Do not ask questions before inspecting the screenshot/resources.
 - Do not turn a phone screenshot, browser screenshot, or presentation mockup into a device frame unless the user explicitly wants the frame.
 - Do not bury the user in many rounds of tiny questions; ask the key questions once, then work phase by phase.

@@ -56,6 +56,14 @@ Prioritize:
 
 If exact values are uncertain, label them as estimates in the audit and refine during playground QA.
 
+For "inspired system" mode:
+
+- Content, names, and labels may change.
+- Component names and APIs may be generalized.
+- Layout DNA should remain: major columns, sidebar treatment, card proportions, density, and signature components.
+- Surface atmosphere should remain unless the user explicitly asks to flatten it.
+- Do not replace a distinctive design with a generic clean dashboard.
+
 ## Device And Browser Frame Handling
 
 Screenshots often include capture context that should not become UI:
@@ -96,12 +104,20 @@ Run what the project provides:
 
 Fix text overlap, clipped controls, broken responsive behavior, and blank/failed render states before final handoff.
 
+Functional validation is not visual validation:
+
+- HTTP 200 means the server responded.
+- Typecheck/build means the code compiles.
+- Neither proves visual fidelity.
+
+For visual fidelity, capture a screenshot or ask the user for one, then compare it against the reference using `visual-comparison-report.md`.
+
 ## Visual QA Procedure
 
 When a dev server can run:
 
 1. Start the app.
-2. Capture or inspect at desktop width first.
+2. Capture a screenshot at the target viewport when tools allow it.
 3. If responsive scope requires it, inspect tablet and mobile widths.
 4. Check for:
    - text larger than the reference rhythm
@@ -113,6 +129,9 @@ When a dev server can run:
    - accent color appearing too often
    - page-level layout bypassing the kit
    - device/browser chrome accidentally recreated as UI
+   - missing signature assets or photo/thumbnail regions
+   - too much whitespace compared with the reference
+   - flattened atmosphere where the app surface should stay softly tinted
 
 If Playwright is available, prefer screenshots over eyeballing. If no browser tool is available, run build/lint and ask the user to share a screenshot after launching.
 

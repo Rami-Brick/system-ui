@@ -18,8 +18,8 @@ Resource inventory:
 ## Roles
 
 - **Primary screen**: the page/screen to recreate in the playground.
-- **Supporting color reference**: palette, swatches, brand colors, gradients.
-- **Supporting typography reference**: type samples, headings, labels, editorial references.
+- **Supporting color reference**: palette, swatches, brand colors, gradients. Treat explicit hex values as higher-confidence tokens than guesses from the primary screenshot.
+- **Supporting typography reference**: type samples, headings, labels, editorial references. Treat named fonts and weight samples as higher-confidence than inferred font choices.
 - **Component/detail reference**: close-up of cards, nav, buttons, charts, inputs.
 - **Mood/inspiration reference**: overall vibe, not layout.
 - **Frame/chrome reference**: device/browser/mockup context around the real UI.
@@ -48,3 +48,16 @@ Should status bar/notch/dynamic island be included?
 ## Default Assumption
 
 When unclear, prefer building the real app surface, not the presentation wrapper. Ask before drawing device chrome.
+
+## Multi-Reference Priority
+
+When references disagree, resolve them in this order:
+
+1. User's explicit instruction.
+2. Primary UI screenshot for layout, density, and component roles.
+3. Palette reference for exact colors.
+4. Typography reference for font family, weights, and type personality.
+5. Component/detail screenshots for micro-layout and states.
+6. Mood references for atmosphere only.
+
+Do not let a typography or palette board replace the layout of the primary UI screenshot; use it to refine tokens.

@@ -53,3 +53,14 @@ Fix:
 - reserve accent for the highest signal item
 - move secondary highlights to identity or neutral tokens
 - update docs if the rule was unclear
+
+### Too Generic / Too Far From Reference
+
+Fix:
+
+- run the fidelity rubric
+- restore major layout proportions before tuning details
+- restore surface atmosphere and background relationships
+- restore signature components and imagery regions
+- reduce excess whitespace if the reference is compact
+- update tokens and page composition before changing random component classes
