@@ -48,6 +48,8 @@ Inspect all resources first, classify each by role, then ask me one batch of int
 Use guided checkpoints.
 ```
 
+For more ready-to-copy prompts, use `prompt-library.md`. If this skill is shipped in an installable package, expose the "Quick Start Prompt" and "README Usage Snippet" from that file in the package README or a top-level `PROMPTS.md` outside the skill folder.
+
 ## If The User Has Only One Screenshot
 
 Say that it will work, but fidelity is usually better with palette/type/assets. Continue using `single-reference-mode.md`.

@@ -83,6 +83,7 @@ Follow this checkpoint sequence unless the user explicitly chooses fast auto:
 Use `references/checkpoint-workflow.md` for detailed phase deliverables and gate criteria.
 Use `references/resource-classification.md` when there are multiple screenshots, device screenshots, browser screenshots, mockups, or supporting visual resources.
 Use `references/user-onboarding.md` when the user asks how to start, how to organize screenshots, or when resources are missing.
+Use `references/prompt-library.md` when the user asks for copy-paste prompts, README usage text, installable package instructions, or guided prompt examples.
 Use `references/fidelity-rubric.md` before implementation and again after the playground render.
 Use `references/single-reference-mode.md` when the user provides only one screenshot and no supporting palette/assets.
 
