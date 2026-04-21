@@ -12,6 +12,8 @@ Use this file when the user asks how to use the skill after installation, wants 
 - Fast Auto Prompt
 - Correction Loop Prompt
 - Visual QA Prompt
+- After Generation Prompt
+- Existing App Integration Prompt
 - Existing App Conversion Prompt
 - README Usage Snippet
 
@@ -230,6 +232,55 @@ Convert one screen at a time.
 Use guided checkpoints and verify after each screen.
 ```
 
+## After Generation Prompt
+
+Use after a design kit has been generated and the user asks what to do next.
+
+```text
+Use $screenshot-to-design-kit after-generation guidance.
+
+The design kit has been generated and visually reviewed.
+
+Help me choose the best next path:
+1. start a new app from this generated repo
+2. copy/integrate this design kit into an existing app
+3. keep this as a design lab/reference repo
+4. package or share the design kit
+
+Explain the tradeoffs briefly.
+Then give me the exact next steps for the path I choose.
+```
+
+## Existing App Integration Prompt
+
+Use when the user has a generated kit and a separate real app.
+
+```text
+Use $screenshot-to-design-kit integration guide.
+
+I have a generated design kit and I want to use it in this existing app.
+
+First inspect:
+- package.json
+- Tailwind/global CSS setup
+- tsconfig/jsconfig aliases
+- route structure
+- current shared UI components
+- the first screen to convert
+
+Then create an integration plan that includes:
+- which generated files/folders to copy
+- which generated files/folders not to copy
+- dependencies to install
+- Tailwind/theme/font/global CSS changes to merge
+- import alias strategy
+- first screen to convert
+- existing behavior that must be preserved
+
+Do not rewrite auth, routing, API calls, stores, schemas, forms, or business logic unless I explicitly ask.
+After I approve the plan, convert one screen at a time.
+```
+
 ## README Usage Snippet
 
 Use this in an installable package README or marketplace page.
@@ -262,4 +313,13 @@ Use this in an installable package README or marketplace page.
    ```
 
 Tip: if the screenshot shows a phone frame, browser chrome, notch, status bar, rounded mockup box, or decorative background, the skill will ask whether that is part of the real UI before implementing.
+
+After the playground looks good, choose one path:
+
+- start a new app from the generated repo
+- copy the generated `design-kit/` into an existing app
+- keep the generated repo as a design lab
+- package/share the kit
+
+The generated kit should include `design-kit/INTEGRATION.md` with exact file-copy and config-merge guidance.
 ````
